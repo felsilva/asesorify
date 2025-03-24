@@ -1,7 +1,8 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "./ui/Button";
+
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,10 +46,10 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "py-3 bg-black/90 backdrop-blur-lg shadow-lg border-b border-white/5" 
-          : "py-6 bg-transparent"
+          ? "py-3 border-b border-[#ffffff]/5" 
+          : "py-6"
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 md:px-8">
@@ -56,10 +57,13 @@ const Navbar = () => {
           {/* Logo */}
           <a 
             href="#home" 
-            className="text-2xl font-bold text-white flex items-center group transition-all duration-300"
+            className="flex items-center space-x-4"
           >
-            <span className="mr-1 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:from-gray-300 group-hover:to-white">Prisma</span>
-            <span className="font-playfair">Inmobiliaria</span>
+            <img 
+              src="/logo.png" 
+              alt="Asesorify Asesoria Especializada Inmobiliaria" 
+              className="h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Menu */}
@@ -69,16 +73,21 @@ const Navbar = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className={`nav-link ${activeSection === link.href.substring(1) ? 'text-white after:w-full' : ''}`}
+                    className={`relative text-[#ffffff]/80 hover:text-[#ffffff] transition-colors duration-300 ${
+                      activeSection === link.href.substring(1) ? 'text-[#ffffff]' : ''
+                    }`}
                   >
                     {link.name}
+                    <span className={`absolute left-0 bottom-0 w-0 h-[1px] bg-[#ffffff] transition-all duration-300 ${
+                      activeSection === link.href.substring(1) ? 'w-full' : ''
+                    }`}></span>
                   </a>
                 </li>
               ))}
             </ul>
             <Button 
               size="sm" 
-              className="bg-gradient-to-r from-white to-gray-300 hover:from-gray-300 hover:to-white text-black transition-all duration-300"
+              className="bg-[#ffffff] hover:bg-[#ffffff]/90 text-[#000000] transition-all duration-300"
             >
               Contáctanos
             </Button>
@@ -86,7 +95,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-[#ffffff] focus:outline-none"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -97,8 +106,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden absolute w-full bg-black/95 backdrop-blur-xl shadow-lg transition-all duration-500 ease-in-out ${
-          isMobileMenuOpen ? "max-h-96 py-6 opacity-100 border-b border-white/10" : "max-h-0 py-0 opacity-0 overflow-hidden"
+        className={`md:hidden absolute w-full bg-[#000000] border-b border-[#ffffff]/10 transition-all duration-300 ${
+          isMobileMenuOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="container mx-auto px-4">
@@ -109,8 +118,8 @@ const Navbar = () => {
                   href={link.href} 
                   className={`block font-medium transition-all duration-300 ${
                     activeSection === link.href.substring(1) 
-                      ? 'text-white' 
-                      : 'text-white/80 hover:text-white'
+                      ? 'text-[#ffffff]' 
+                      : 'text-[#ffffff]/80 hover:text-[#ffffff]'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -121,7 +130,7 @@ const Navbar = () => {
           </ul>
           <Button 
             fullWidth 
-            className="bg-gradient-to-r from-white to-gray-300 hover:from-gray-300 hover:to-white text-black transition-all duration-300"
+            className="bg-[#ffffff] hover:bg-[#ffffff]/90 text-[#000000] transition-all duration-300"
           >
             Contáctanos
           </Button>

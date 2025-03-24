@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -26,16 +25,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           // Variant styles
           {
             // Primary button
-            "bg-white text-black hover:bg-gray-200 active:bg-gray-300": variant === "primary",
+            "bg-[#ffffff] text-[#000000] hover:bg-[#f0f0f0] active:bg-[#e0e0e0]": variant === "primary",
             
             // Secondary button
-            "bg-gray-800 text-white hover:bg-gray-700 active:bg-gray-600": variant === "secondary",
+            "bg-[#1a1a1a] text-[#ffffff] hover:bg-[#2a2a2a] active:bg-[#333333]": variant === "secondary",
             
             // Outline button
-            "border border-white text-white hover:bg-white/10 active:bg-white/20": variant === "outline",
+            "border border-[#ffffff]/20 text-[#ffffff] hover:bg-[#ffffff]/10 active:bg-[#ffffff]/20": variant === "outline",
             
             // Ghost button
-            "text-white hover:bg-white/10 active:bg-white/20": variant === "ghost",
+            "text-[#ffffff] hover:bg-[#ffffff]/10 active:bg-[#ffffff]/20": variant === "ghost",
           },
           
           // Full width

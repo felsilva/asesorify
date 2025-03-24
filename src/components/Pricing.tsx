@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Button from "./ui/Button";
 import { Check, ArrowRight } from "lucide-react";
@@ -14,7 +13,7 @@ import {
 const pricingPlans = [
   {
     name: "Signature",
-    price: "899€",
+    price: "$899.990",
     description: "Marketing esencial para agentes distinguidos",
     features: [
       "Diseño de sitio web personalizado",
@@ -29,7 +28,7 @@ const pricingPlans = [
   },
   {
     name: "Elite",
-    price: "1.899€",
+    price: "$1.899.990",
     description: "Solución integral para profesionales establecidos",
     features: [
       "Desarrollo de sitio web premium",
@@ -45,8 +44,8 @@ const pricingPlans = [
     buttonText: "Más Popular"
   },
   {
-    name: "Exclusivo",
-    price: "3.499€",
+    name: "Exclusive",
+    price: "$3.499.990",
     description: "Servicios a medida para agentes inmobiliarios de lujo",
     features: [
       "Sitio web exclusivo con integración IDX",
@@ -187,14 +186,14 @@ const Pricing = () => {
             <div 
               key={index} 
               className={`glass-card p-8 transform transition-all duration-500 hover:-translate-y-2 ${
-                plan.popular ? 'border-white/40 ring-1 ring-white/30 bg-gradient-to-br from-white/15 to-white/5' : ''
+                plan.popular ? 'border-[#ffffff]/40 ring-1 ring-[#ffffff]/30 bg-gradient-to-br from-[#ffffff]/15 to-[#ffffff]/5' : ''
               }`}
               onMouseEnter={() => setHoveredPlan(plan.name)}
               onMouseLeave={() => setHoveredPlan(null)}
             >
               {plan.popular && (
                 <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-3">
-                  <span className="bg-gradient-to-r from-white to-gray-300 text-black text-xs px-4 py-1 rounded-full shadow-lg">
+                  <span className="bg-gradient-to-r from-[#ffffff] to-[#cccccc] text-[#000000] text-xs px-4 py-1 rounded-full shadow-lg">
                     Más Popular
                   </span>
                 </div>

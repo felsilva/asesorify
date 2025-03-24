@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
@@ -16,8 +15,8 @@
     --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 5%;
     --secondary-foreground: 0 0% 100%;
@@ -28,7 +27,7 @@
     --accent: 0 0% 100%;
     --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 0% 0%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 15%;
@@ -56,7 +55,10 @@
   }
 
   body {
-    @apply bg-black text-foreground antialiased;
+    @apply bg-[#000000] text-foreground antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
     font-family: 'Inter', sans-serif;
   }
   
@@ -66,32 +68,33 @@
   
   /* Glass morphism styles */
   .glass {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-all duration-300;
+    @apply bg-[#000000] border border-[#ffffff]/10 rounded-xl;
   }
   
   .glass-darker {
-    @apply bg-black/80 backdrop-blur-lg border border-white/10 rounded-xl transition-all duration-300;
+    @apply bg-[#000000] border border-[#ffffff]/10 rounded-xl;
   }
   
   .glass-card {
-    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md 
-    border border-white/10 rounded-xl shadow-lg transition-all duration-300;
+    @apply backdrop-blur-md border border-[#ffffff]/10 rounded-xl shadow-lg;
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(0,0,0,0.05));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   
   .glass-card:hover {
-    @apply bg-gradient-to-br from-white/15 to-white/10 border-white/20 
+    @apply bg-gradient-to-br from-white/15 to-black/10 border-white/20 
     shadow-xl transform -translate-y-1;
   }
   
   /* Hover effects for links */
   .nav-link {
-    @apply relative px-2 py-1 text-sm font-medium text-white/80 transition-colors 
-    duration-300 hover:text-white;
+    @apply relative px-2 py-1 text-sm font-medium text-[#ffffff]/80 hover:text-[#ffffff] transition-colors duration-300;
   }
   
   .nav-link::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-white to-gray-300 rounded-full 
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#ffffff] to-[#ffffff]/0 rounded-full 
     transition-all duration-300 ease-in-out;
   }
   
@@ -101,7 +104,8 @@
   
   /* Custom section styles */
   .section {
-    @apply py-24 px-4 md:px-8 lg:px-16 w-full mx-auto max-w-7xl;
+    @apply py-24 px-4 md:px-8 lg:px-16 w-full mx-auto max-w-7xl relative;
+    background-color: #000000;
   }
   
   /* Staggered animation for children */
@@ -124,8 +128,8 @@
 
   .gradient-overlay::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-black/90 to-black/50 mix-blend-multiply;
-    z-index: 1;
+    @apply absolute inset-0;
+    background: #000000;
   }
   
   .gradient-overlay > * {
@@ -139,7 +143,7 @@
   
   .elegant-divider::before {
     content: '';
-    @apply absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/50 to-transparent;
+    @apply bg-gradient-to-r from-transparent via-neutral-400/50 to-transparent;
   }
   
   .elegant-divider::after {
@@ -155,22 +159,12 @@
   
   .elegant-border::before,
   .elegant-border::after {
-    content: '';
-    @apply absolute w-12 h-12 border-white/40;
-    transition: all 0.3s ease;
-  }
-  
-  .elegant-border::before {
-    @apply top-0 left-0 border-t-2 border-l-2;
-  }
-  
-  .elegant-border::after {
-    @apply bottom-0 right-0 border-b-2 border-r-2;
+    @apply border-[#ffffff]/20;
   }
   
   .elegant-border:hover::before,
   .elegant-border:hover::after {
-    @apply border-white w-16 h-16;
+    @apply border-[#ffffff]/40;
   }
   
   /* Enhanced button hover effect */
@@ -180,8 +174,8 @@
   
   .btn-elegant::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-white/80 to-white/40 
-    opacity-0 transition-opacity duration-300;
+    @apply bg-gradient-to-r from-[#ffffff]/80 to-[#ffffff]/40;
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
     z-index: -1;
   }
   
@@ -192,12 +186,12 @@
 
 /* Add keyframes for animations */
 @keyframes fade-in {
-  0% { 
-    opacity: 0; 
-    transform: translateY(20px);
+  from {
+    opacity: 0;
+    transform: translateY(15px);
   }
-  100% { 
-    opacity: 1; 
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -222,4 +216,50 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Asegurar que las secciones tengan un fondo sólido */
+.section {
+  @apply py-24 px-4 md:px-8 lg:px-16 w-full mx-auto max-w-7xl relative;
+  background-color: #000000;
+}
+
+/* Asegurar que los elementos con backdrop-filter tengan un contexto de apilamiento */
+.glass,
+.glass-darker,
+.glass-card {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Ajustar los colores de los botones para evitar tonos azulados */
+.btn-elegant::before {
+  content: '';
+  @apply bg-gradient-to-r from-[#ffffff]/80 to-[#ffffff]/40;
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+  z-index: -1;
+}
+
+/* Asegurar que los bordes sean completamente blancos/negros */
+.elegant-border::before,
+.elegant-border::after {
+  @apply border-[#ffffff]/20;
+}
+
+.elegant-border:hover::before,
+.elegant-border:hover::after {
+  @apply border-[#ffffff]/40;
+}
+
+/* Efecto glass solo para servicios */
+.services-card {
+  @apply bg-[#000000] border border-[#ffffff]/10 rounded-xl transition-all duration-300;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.services-card:hover {
+  @apply bg-[#000000] border-[#ffffff]/20;
 }

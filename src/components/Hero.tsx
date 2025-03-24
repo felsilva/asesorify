@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import Button from "./ui/Button";
 import { ChevronDown, ArrowRight } from "lucide-react";
@@ -51,12 +50,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 stagger-animation">
             <div className="mb-8 inline-block overflow-hidden">
-              <span className="inline-block py-1 px-4 rounded-full bg-gradient-to-r from-white/20 to-white/10 text-white text-sm font-medium border border-white/20">
+              <span className="inline-block py-1 px-4 rounded-full bg-gradient-to-r from-[#ffffff]/20 to-[#ffffff]/10 text-white text-sm font-medium border border-[#ffffff]/20">
                 Marketing Inmobiliario de Lujo
               </span>
             </div>
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Eleva Tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">Presencia</span> Inmobiliaria
+              Eleva Tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#cccccc]">Presencia</span> Inmobiliaria
             </h1>
             <p className="text-lg text-white/70 mb-10 max-w-lg leading-relaxed">
               Ayudamos a agentes inmobiliarios y profesionales de propiedades de lujo a elevar su marca con soluciones de marketing sofisticadas y tecnología innovadora.
@@ -77,7 +76,7 @@ const Hero = () => {
               <div className="glass-card p-4 md:p-6 aspect-square max-w-md mx-auto transform transition-all duration-500 hover:rotate-0 relative group">
                 <div className="w-full h-full rounded-lg overflow-hidden">
                   <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out">
-                    <div className="w-full h-full bg-gradient-to-br from-black/40 to-black/20 opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
+                    <div className="w-full h-full bg-gradient-to-br from-[#000000]/40 to-[#000000]/20 opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
                   </div>
                 </div>
                 

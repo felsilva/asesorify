@@ -30,7 +30,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Escríbenos</h3>
-                  <p className="text-white/70">hola@prismainmobiliaria.com</p>
+                  <p className="text-white/70">hola@asesorify.cl</p>
                 </div>
               </div>
               
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Llámanos</h3>
-                  <p className="text-white/70">+34 555 123 456</p>
+                  <p className="text-white/70">+56 9 8765 4321</p>
                 </div>
               </div>
               
@@ -50,7 +50,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Visítanos</h3>
-                  <p className="text-white/70">Calle Creativa 123, Planta 10<br />Madrid, España 28001</p>
+                  <p className="text-white/70">Santiago, Chile </p>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <Button type="submit" fullWidth className="group bg-gradient-to-r from-white to-gray-300 hover:from-gray-300 hover:to-white text-black transition-all duration-300">
+              <Button type="submit" fullWidth className="group bg-gradient-to-r from-white to-gray-500 hover:from-gray-500 hover:to-white text-black transition-all duration-300">
                 Enviar Mensaje
               </Button>
             </form>

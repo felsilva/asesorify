@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -15,7 +14,11 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1800px'
 			}
 		},
 		extend: {
@@ -58,10 +61,10 @@ export default {
 				},
 				navy: {
 					DEFAULT: '#000000',
-					50: '#f2f2f2',
-					100: '#e6e6e6',
-					200: '#cccccc',
-					300: '#b3b3b3',
+					50: '#ffffff',
+					100: '#f2f2f2',
+					200: '#e6e6e6',
+					300: '#cccccc',
 					400: '#999999',
 					500: '#808080',
 					600: '#666666',
@@ -91,6 +94,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'glass-gradient': {
+					start: 'rgba(255, 255, 255, 0.1)',
+					end: 'rgba(0, 0, 0, 0.05)'
+				},
+				'glass-darker-gradient': {
+					start: 'rgba(0, 0, 0, 0.8)',
+					end: 'rgba(0, 0, 0, 0.9)'
 				}
 			},
 			borderRadius: {
