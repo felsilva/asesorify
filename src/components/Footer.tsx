@@ -93,7 +93,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} Prisma Inmobiliaria. Todos los derechos reservados.
+            © {currentYear} Asesorify Asesoria Especializada Inmobiliaria. Todos los derechos reservados.
           </p>
           <div className="flex items-center mt-6 md:mt-0">
             <a 
