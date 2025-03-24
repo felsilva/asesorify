@@ -17,11 +17,11 @@ const Footer = () => {
       <div className="container max-w-7xl mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 mb-8">
               <img 
                 src="/logo.png" 
                 alt="Asesorify Asesoria Especializada Inmobiliaria" 
-                className="h-12 w-auto filter invert"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-white/70 mb-8 max-w-md leading-relaxed">

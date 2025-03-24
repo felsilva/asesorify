@@ -1,8 +1,8 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import LegalServices from "@/components/LegalServices";
 import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -70,11 +70,14 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <Navbar />
-      <Hero />
-      <Services />
-      <Pricing />
-      <About />
-      <Contact />
+      <main>
+        <Hero />
+        <LegalServices />
+        <Services />
+        <About />
+        <Pricing />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
